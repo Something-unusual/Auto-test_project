@@ -2,7 +2,7 @@ from .base_page import BasePage
 from .locators import ProductPageLocators
 
 
-class PageObject(BasePage):
+class ProductPage(BasePage):
     def add_product_to_cart(self):
         self.should_be_add_button()
         self.press_button_to_add_item()
@@ -39,3 +39,9 @@ class PageObject(BasePage):
 
     def should_be_cart_total_message(self):
         assert self.is_element_present(*ProductPageLocators.CART_TOTAL), "Cart total is not presented"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented"
+
+    def should_disappear_of_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is disappeared"
