@@ -12,7 +12,7 @@ class LoginPageLocators:
 
 class ProductPageLocators:
     ADD_BUTTON = (By.CSS_SELECTOR, ".btn.btn-lg.btn-primary")
-    ADD_MESSAGE = (By.CSS_SELECTOR, "#messages :first-child .alertinner")
-    PRODUCT_NAME = (By.CSS_SELECTOR, "#messages :first-child .alertinner strong")
+    PRODUCT_IN_ADD_MESSAGE = (By.CSS_SELECTOR, "#messages :first-child .alertinner strong")
+    PRODUCT_NAME = (By.CSS_SELECTOR, "div > h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, "h1 + p")
     CART_TOTAL = (By.CSS_SELECTOR, "#messages :nth-child(3) .alertinner p strong")
